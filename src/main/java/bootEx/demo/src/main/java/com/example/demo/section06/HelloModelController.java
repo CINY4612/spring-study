@@ -12,6 +12,7 @@ public class HelloModelController {
     public String helloView(Model model) {
         // model : 뷰에서 표시할 데이터를 담은 객체
         model.addAttribute("msg", "타임리프");
+        model.addAttribute("name", "ciny");
         return "helloThymeleaf";
     }
 }
