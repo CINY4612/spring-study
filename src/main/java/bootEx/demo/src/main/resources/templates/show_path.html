@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>경로에 포함된 값</title>
+</head>
+<body>
+<h3><a th:href="@{/function/1}">기능-1</a></h3>
+<h3><a th:href="@{/function/2}">기능-2</a></h3>
+<h3><a th:href="@{/function/3}">기능-3</a></h3>
+
+<!--같은 form 태그 안에 포함된 여러개의 버튼-->
+<form method="post" th:action="@{/send}">
+    <input name="one" type="submit" value="버튼1">
+    <input name="two" type="submit" value="버튼2">
+    <input name="three" type="submit" value="버튼3">
+</form>
+</body>
+</html>
