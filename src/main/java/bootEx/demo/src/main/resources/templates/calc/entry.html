@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form method="post" th:action="@{/calc}" th:object="${calcForm}">
+    <div>
+        <input th:field="*{leftNum}" type="text">
+        +
+        <input th:field="*{rightNum}" type="text">
+        <input type="submit" value="계산">
+    </div>
+
+    <ul th:if="${#fields.hasErrors('*')}">
+        <li th:each="err:${#fields.errors('*')}" th:text="${err}"></li>
+    </ul>
+</form>
+</body>
+</html>
