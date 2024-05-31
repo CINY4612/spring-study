@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calculator</title>
+    <title th:text="#{title.entry}">Calculator</title>
 </head>
 <body>
 <form method="post" th:action="@{/calc}" th:object="${calcForm}">
@@ -12,6 +12,7 @@
         <input th:field="*{rightNum}" type="text">
         <input type="submit" value="계산">
     </div>
+    <button th:text="#{button.send}" type="submit"></button>
 
     <ul th:if="${#fields.hasErrors('*')}">
         <li th:each="err:${#fields.errors('*')}" th:text="${err}"></li>
