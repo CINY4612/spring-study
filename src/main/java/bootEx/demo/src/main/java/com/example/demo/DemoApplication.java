@@ -18,7 +18,7 @@ public class DemoApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext application = SpringApplication.run(DemoApplication.class, args);
         application.getBean(DemoApplication.class).greet();
-        application.getBean(DemoApplication.class).crudExecute();
+//        application.getBean(DemoApplication.class).crudExecute();
     }
 
     private void greet() {
